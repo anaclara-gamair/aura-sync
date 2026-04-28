@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Controle do Robo</title>
+
+<link rel="stylesheet" href="../css/robo.css">
+<script src="../script/robo.js" defer></script>
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+</head>
+<body>
+
+<!-- NAVBAR (mesma) -->
+<nav class="navbar">
+  <div class="logo">aura-sync</div>
+
+  <div class="menu">
+    <a href="#">Dashboard</a>
+    <a href="#">Sensores</a>
+    <a href="#">Sobre</a>
+    <a href="#">Robô</a>
+  </div>
+
+  <div class="acoes">
+    <button class="btn-outline">Entrar</button>
+    <button class="btn-fill">Login</button>
+  </div>
+</nav>
+
+
+<div class="container">
+
+  <!-- TITULO -->
+  <div>
+    <h1>Controle do Robo</h1>
+    <p>Informacoes e status do robo de monitoramento</p>
+  </div>
+
+
+  <!-- HEADER ROBO -->
+  <div class="robo-header">
+
+    <div class="robo-img">
+        <span class="material-symbols-outlined">smart_toy</span>
+      </div>
+
+    <div>
+      <h2>Robo-sense-01 <span class="online">● Online</span></h2>
+      <p>Robo de monitoramento ambiental - coleta dados em tempo real</p>
+
+      <div class="robo-info">
+
+        <div class="mini-card">
+          <span>FIRMWARE</span>
+          <p>Ver. Beta</p>
+        </div>
+
+        <div class="mini-card">
+          <span>PLACAS</span>
+          <p>Arduino uno 2x</p>
+        </div>
+
+        <div class="mini-card">
+          <span>UPTIME</span>
+          <p id="uptime"></p>
+        </div>
+
+        <div class="mini-card">
+          <span>LAST UPDATE</span>
+          <p id="lastUpdate"></p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- SD CARD -->
+  <div class="sd-card">
+    <div>
+      <h3>Cartao SD</h3>
+      <p>Espaco livre: 15 GB</p>
+    </div>
+
+    <div class="barra">
+      <div class="barra-fill"></div>
+    </div>
+  </div>
+
+
+  <!-- STATUS -->
+  <div class="status-grid">
+
+    <div class="card-base">
+      <h4>Status geral</h4>
+      <p>OK</p>
+    </div>
+
+    <div class="card-base">
+      <h4>Sistema</h4>
+      <p>Ativo</p>
+    </div>
+
+    <div class="card-base">
+      <h4>Sensores</h4>
+      <p>6 ativos</p>
+    </div>
+
+    <div class="card-base">
+      <h4>Erros</h4>
+      <p>12 falhas</p>
+    </div>
+
+  </div>
+
+
+  <!-- ALERTAS + GRAFICOS -->
+  <div class="grafico-grid">
+
+    <div class="card-base">
+      <h4>Alertas</h4>
+      <ul id="listaAlertas"></ul>
+    </div>
+
+    <div class="card-base">
+      <h4>Grafico de erros</h4>
+      <canvas id="graficoErros"></canvas>
+    </div>
+
+    <div class="card-base">
+      <h4>Problemas de conexões por sensor</h4>
+      <canvas id="graficoRadar"></canvas>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
