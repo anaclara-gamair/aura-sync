@@ -53,8 +53,34 @@ body {
 
 .sensor-row {
   display: flex;
-  gap: 25px;
+  gap: 40px; /* mais espaço entre sensores */
   align-items: center;
+}
+
+/* cada sensor */
+.icon-box {
+  text-align: center;
+  min-width: 90px;
+}
+
+/* ícones */
+.icon-box i {
+  display: block;
+  font-size: 36px; /* maior */
+  margin-bottom: 10px;
+}
+
+/* valores (58%, 320 lux...) */
+.icon-box strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+/* nomes (Umidade, Luz...) */
+.icon-box div {
+  font-size: 13px;
+  opacity: 0.7;
 }
 
 /* =========================
@@ -69,13 +95,40 @@ body {
 
 .info-card {
   display: flex;
-  gap: 10px;
+  flex-direction: column;
   align-items: center;
+  justify-content: center; 
+  text-align: center;
+
   background: #0d2b4d;
-  padding: 15px;
+  padding: 18px;
   border-radius: 12px;
+
+  gap: 6px;
 }
 
+.info-card div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ícone maior */
+.info-card i {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+/* título (Estabilidade, Robô...) */
+.info-card span {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* valor (Pressão normal, 82%...) */
+.info-card strong {
+  font-size: 16px;
+}
 /* =========================
    GRÁFICOS (CORRIGIDO)
 ========================= */
@@ -97,7 +150,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  overflow: hidden; /*sem sobreposição*/
+  overflow: hidden; /* */
 }
 
 /* TÍTULO */
